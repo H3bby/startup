@@ -1,17 +1,16 @@
-# Sew New
+# Pompom Study
 ## Elevator Pitch
-Are you "sew" new to the world of sewing and don't know where to begin? There's so much information out there but it's all scattered and hard to understand. Don't worry! Sew New is here to help! Sew New provides users with easy-to-follow instructions, terminology, and other helpful resources to make learning easy and all in one place.
+The Pomodoro Technique is a time management technique to help you focus in small bursts, called pomodoros. This technique uses a 4 part cycle to help battle procrastination. Pompom Study makes keeping track of yours pomodoro sections and assignments easy.
 
 ## Design
-![Homepage](Homepage.png)
-![Lesson Page](LessonPage.png)
+![Homepage](pompomhome.png)
+![Lesson Page](pompomabout.png)
 
 ## Key Features
 - Secure login with HTTPS
-- Search terms and materials
-- Start and finish lessons to keep progress
-- Favorite terms or lessons you want to save/come back to
-- Ask questions while in lessons
+- Switch between set study and break timers
+- Automatically track your pomodoros
+- Keep a to do list
 
 ## Technologies
 - **HTML** - Uses correct HTML structure for the different pages. There will be pages for the login, home page, termminology page, and a lesson page. Pages will have hyperlinks.

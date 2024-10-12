@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pompom Study HTML</title>
+    <title>Pompom Login</title>
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
@@ -26,39 +26,19 @@
     </header>
 
     <main>
-      <section></section>
-        <h2>Happy Studying!</h2>
-        <div>  
-          <button>Study</button>
-          <button>Short Break</button>
-          <button>Long Break</button>
-          <button>Mute</button>
+
+      <form method="get" action="play.html"></form>
+        <div>
+          <span>Email</span>
+          <input type="text" placeholder="your@email.com" />
         </div>
-        # timer image
-        <h2>02:32</h2>
-          <button>Back</button>
-          <button>Play/Pause</button>
-          <button>Skip</button>
-        <h3>Sessions</h3>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <button>Reset</button>
-      <section></section>
-        <div class="container">
-          <h2>To Do List</h2>
-          <div class="todo">
-            <input
-              type="text"
-              id="todotext"
-              class="todoinput"
-              placeholder="Add task"
-            />
-          <button>Add Task</button>
-          </div>
+        <div>
+          <span>Password</span>
+          <input type="password" placeholder="password" />
         </div>
-    </main>
+        <button type="submit">Login</button>
+        <button type="submit">Create</button>
+      </form>
 
     <footer>
       <hr />

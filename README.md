@@ -22,7 +22,7 @@ The Pomodoro Technique is a time management technique to help you focus in small
 - **Database Data** - Store user info for login and save to-do list and pomodoro for users
 - **WebSocket Data** - Shared to-do list you can edit with other users and chat box
 
-#HTML Deliverable
+# HTML Deliverable
 The HTML structure was built for my startup. Here's how each of the aspects was incorporated:
 - HTML Pages - Three pages: Index page as main page, About page to give additional info, and login page for users to log in
 - Tags - Body, Nav, Main, Header and Footer tags all used correctly on each page

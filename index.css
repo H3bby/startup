@@ -13,6 +13,8 @@
     height: 100%
   }
   
+/* TOP OF THE PAGE */
+
   header {
     background: #ADD8E6;
     display: flex;
@@ -41,6 +43,8 @@
     padding: 0 0.5em;
   }
 
+/* TIMER SECTION */
+
   main {
     display: flex;
     flex: 1;
@@ -56,6 +60,42 @@
     border-radius: 20px;
     margin: 0 1em;
   }
+
+  .top-buttons {
+    margin: 10px;
+  }
+  
+  .top-button {
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px #B1DAE7;
+    border: none;
+    padding: 8px;
+    color: #ADD8E6;
+    font-weight: bold;
+  }
+
+  .sessions {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+  }
+  
+  .poms {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+  }
+  
+  .pom {
+    background-color: white;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 8px;
+    color: gray;
+  }
+
+/* BOTTOM SECTIONS */
 
   .bottom {
     direction: flex;

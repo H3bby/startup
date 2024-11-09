@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pompom Study</title>
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header>
@@ -20,23 +20,33 @@
       <section></section>
         <div class="welcome"><h2>Happy Studying, Shelby!</h2></div>
         <div class="timer">
-          <div>  
-            <button>Focus</button>
-            <button>Short Break</button>
-            <button>Long Break</button>
+          <div class="top-buttons">  
+            <button class="top-button">Focus</button>
+            <button class="top-button">Short Break</button>
+            <button class="top-button">Long Break</button>
+            <button class="top-button">Mute</button>
           </div>
-          <button>Mute</button>
-          <div><img src="circletimer.png" alt="Circle timer" height="100"></div>
+          <div>
+            <svg width="250" height="250">
+            <circle cx="125" cy="125" r="100" stroke=#3691b0 stroke-width="20" fill="transparent"/>
+            </svg>
+          </div>
           <div><h2>02:32</h2></div>
-            <button>Back</button>
-            <button>Play/Pause</button>
-            <button>Skip</button>
-          <div><h3>Sessions</h3></div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <button>Reset</button>
+          <div>
+            <button class="play">Play</button>
+            <button class="pause">Pause</button>
+            <button class="restart">Restart</button>
+          </div>
+          <div class="sessions">
+            <div><h3>Sessions</h3></div>
+            <div class="poms">
+              <div class="pom">1</div>
+              <div class="pom">2</div>
+              <div class="pom">3</div>
+              <div class="pom">4</div>
+              <div><button class="resetpoms">Reset</button></div>
+            </div>
+          </div>
         </div>   
       <section class="bottom">
         <div class="container">

@@ -24,6 +24,10 @@
   h1 {
     padding: 0 0.5em;
   }
+
+  h2 {
+    padding: 0 1em;  
+  }
   
   nav {
     display: flex;
@@ -44,6 +48,21 @@
     justify-content: start;
   }
   
+  .timer {
+    background-color: #EBF6F9;
+    width: 600px;
+    padding: 0 0.5em;
+    box-shadow: 4px 4px #F2F2F2;
+    border-radius: 20px;
+    margin: 0 1em;
+  }
+
+  .bottom {
+    direction: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   footer {
     flex: 0 50px;
     display: flex;

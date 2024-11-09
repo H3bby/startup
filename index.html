@@ -2,43 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pompom Study</title>
     <link href="main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
       <h1>Pompom Study</h1>
       <nav>
-        <div><a href="index.html">Home</a></div>
-        <div><a href="about.html">About</a></div>
-        <div><a href="login.html">Login</a></div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
       </nav>
     </header>
 
     <main>
       <section></section>
-        <div><h2>Happy Studying, Shelby!</h2></div>
-        <div>  
-          <button>Focus</button>
-          <button>Short Break</button>
-          <button>Long Break</button>
-        </div>
-        <button>Mute</button>
-        <div><img src="circletimer.png" alt="Circle timer" height="100"></div>
-        <div><h2>02:32</h2></div>
-          <button>Back</button>
-          <button>Play/Pause</button>
-          <button>Skip</button>
-        <div><h3>Sessions</h3></div>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <button>Reset</button>
-      <section>
+        <div class="welcome"><h2>Happy Studying, Shelby!</h2></div>
+        <div class="timer">
+          <div>  
+            <button>Focus</button>
+            <button>Short Break</button>
+            <button>Long Break</button>
+          </div>
+          <button>Mute</button>
+          <div><img src="circletimer.png" alt="Circle timer" height="100"></div>
+          <div><h2>02:32</h2></div>
+            <button>Back</button>
+            <button>Play/Pause</button>
+            <button>Skip</button>
+          <div><h3>Sessions</h3></div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <button>Reset</button>
+        </div>   
+      <section class="bottom">
         <div class="container">
           <h2>My To Do List</h2>
           <div class="todo">
@@ -58,8 +58,6 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section>
         <div class="container">
           <h2>Shared To Do List</h2>
           <div><h5>Shelby, Alice, Jeff</h5></div>
@@ -80,7 +78,6 @@
             </ul>
           </div>
         </div>
-      </section>
       <div class="chat-popup">
         <h3>Chat</h3>
         <form action="..." >
@@ -93,13 +90,12 @@
       <p>Alice: I'll do HW 2</p>
       <p>Jeff: I'll start the lab</p>
       </div>
+      </section>
     </main>
 
     <footer>
-      <hr />
-      <span class="text-reset">Shelby Endrizzi</span>
-      <br />
-      <a href="https://github.com/H3bby/startup">GitHub</a>
+      <div></div><h3>Shelby Endrizzi</h3></div>
+      <div></div><a href="https://github.com/H3bby/startup">GitHub</a></div>
     </footer>
   </body>
 </html>

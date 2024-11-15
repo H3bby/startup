@@ -3,8 +3,8 @@
 The Pomodoro Technique is a time management technique to help you focus in small bursts, called pomodoros. This technique uses a 4 part cycle to help battle procrastination. Pompom Study makes keeping track of your pomodoro sections and assignments easy.
 
 ## Design
-![Homepage](pompomhome.png)
-![About Page](pompomabout.png)
+![Homepage](pompom%20home.png)
+![About Page](pompom%20about.png)
 
 ## Key Features
 - Secure login with HTTPS

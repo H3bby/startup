@@ -5,6 +5,7 @@ The Pomodoro Technique is a time management technique to help you focus in small
 ## Design
 ![Homepage](pompom%20home.png)
 ![About Page](pompom%20about.png)
+idk why these links stopped working
 
 ## Key Features
 - Secure login with HTTPS

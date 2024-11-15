@@ -75,16 +75,24 @@
     font-weight: bold;
   }
 
+  .circle-and-play-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .sessions {
     display: flex;
     flex-direction: row;
     margin: 5px;
+    align-items: center;
   }
   
   .poms {
     display: flex;
     flex-direction: row;
     margin: 10px;
+    align-items: center;
   }
   
   .pom {
@@ -98,7 +106,7 @@
 /* BOTTOM SECTIONS */
 
   .bottom {
-    direction: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
   }

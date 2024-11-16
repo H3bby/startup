@@ -72,9 +72,16 @@
     margin: 0 1em;
   }
 
+  .timer-button {
+    width: 80px;
+    height: 80px;
+    background-color: #EBF6F9;
+    border: none;
+  }
+
   img {
-    width: 20px;
-    height: 20px;
+    width: 80px;
+    height: 80px;
   }
 
   .top-buttons {

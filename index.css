@@ -33,7 +33,8 @@
   }
 
   h2 {
-    padding: 0 1em;  
+    padding: 0 1em;
+    font-size: 2.5em;
   }
   
   nav {
@@ -65,12 +66,17 @@
 
   .timer {
     background-color: #EBF6F9;
-    width: 600px;
+    width: 700px;
     height: 400px;
     padding: 0 0.5em;
-    box-shadow: 4px 4px #F2F2F2;
+    box-shadow: 0 0 10px 5px #F2F2F2;
     border-radius: 20px;
     margin: 0 1em;
+  }
+
+  .timer-button {
+    width: 20px;
+    height: 20px;
   }
 
   .top-buttons {
@@ -89,8 +95,19 @@
 
   .circle-and-clock {
     display: flex;
-    flex-direction: row;
+    position: relative;
     align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .timer-text {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
   }
 
   .sessions {

@@ -17,8 +17,8 @@
     </header>
 
     <main>
+      <div class="welcome"><h2>Happy Studying, Shelby!</h2></div>
       <section></section>
-        <div class="welcome"><h2>Happy Studying, Shelby!</h2></div>
         <div class="timer">
           <div class="top-buttons">  
             <button class="top-button">Focus</button>
@@ -26,17 +26,18 @@
             <button class="top-button">Long Break</button>
             <button class="top-button">Mute</button>
           </div>
-          <div class="circle-and-play-buttons">
-            <div>
+          <div class="circle-and-clock">
+            <div class="mins">0</div>
+            <div>:</div>
+            <div class="secs">00</div>
               <svg width="250" height="250">
-              <circle cx="125" cy="125" r="100" stroke=#3691b0 stroke-width="20" fill="transparent"/>
+                <circle cx="125" cy="125" r="100" stroke=#3691b0 stroke-width="20" fill="transparent"/>
               </svg>
-            </div>
-            <div><h2>02:32</h2></div>
-            <div>
-              <button class="restart">Restart</button>
-              <button class="play">Play</button>
-            <button class="pause">Pause</button>
+          </div>
+          <div class="main-buttons">
+              <button class="restart"><img src="previous.png"></button>
+              <button class="play"><img src="play.png"></button>
+            <button class="pause"><img src="pause.png"></button>
             </div>
           </div>
           <div class="sessions">
@@ -50,6 +51,25 @@
             </div>
           </div>
         </div>   
+        <div class="container">
+          <h2>My To Do List</h2>
+          <div class="todo">
+            <input
+              type="text"
+              id="todotext"
+              class="todoinput"
+              placeholder="Add task"
+            />
+          <button>Add Task</button>
+          </div>
+          <div>
+            <ul>
+              <li>Homework 1</li>
+              <li>Homework 2</li>
+              <li>Lab 1</li>
+            </ul>
+          </div>
+        </div>
       <section class="bottom">
         <div class="container">
           <h2>My To Do List</h2>

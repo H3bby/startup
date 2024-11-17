@@ -85,7 +85,7 @@
   }
 
   .top-buttons {
-    margin: 10px;
+    margin: 20px;
   }
   
   .top-button {
@@ -110,6 +110,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .main-buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
   }
 
   .timer-text {
@@ -137,7 +143,7 @@
   
   .pom {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 50%;
     margin: 5px;
     padding: 8px;
     color: gray;
@@ -175,8 +181,8 @@
 }
 
 .add-button {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #9dd0e1;
   border: none;
 }

@@ -1,22 +1,28 @@
 * {
     font-family: sans-serif;
+    box-sizing: border-box;
   }
-  
-  body {
-    margin: 0;
+
+  html {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
+    width: 100%;
     flex: 1;
-    background-color: #F8FAFC;
+  }
+
+  body {
+    margin: 0;
+    background-color: #F3F3F1;
   }
   
 /* TOP OF THE PAGE */
 
   header {
-    background-color: #F8FAFC;
+    background-color: #F3F3F1;
     display: flex;
     flex: 0 50px;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     box-shadow: 0 0 10px #e8e8e3;
@@ -51,21 +57,15 @@
     flex-direction: column;
     justify-content: start;
   }
-  
-  #TOP {
-    background-color: #F3F3F1;
-    padding-bottom: 70px;
-    box-shadow: 0 0 20px 10px #F3F3F1;
-  }
 
  .top {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
   }
 
   .timer {
-    background-color: #EBF6F9;
+    background-color: #9dd0e1;
     width: 700px;
     height: 400px;
     padding: 0 0.5em;
@@ -75,15 +75,15 @@
   }
 
   .timer-button {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: #EBF6F9;
     border: none;
   }
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
   .top-buttons {
@@ -91,12 +91,12 @@
   }
   
   .top-button {
-    background-color: white;
+    background-color: #c4e3ed;
     border-radius: 7px;
     box-shadow: 1px 1px #B1DAE7;
     border: none;
     padding: 8px;
-    color: #ADD8E6;
+    color: #76bdd5;
     font-weight: bold;
   }
 
@@ -132,7 +132,7 @@
   .sessions {
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin-left: 9px;
     align-items: center;
   }
   
@@ -144,18 +144,22 @@
   }
   
   .pom {
-    background-color: white;
+    display: flex;
+    background-color: #d8edf3;
     border-radius: 50%;
     margin: 5px;
-    padding: 8px;
-    color: gray;
+    height: 25px;
+    width: 25px;
+    color: #76bdd5;
+    font-weight: bold;
+    align-items: center;
   }
 
 /* MY TO DO */
 
 .mytodo {
   display: flex;
-  background-color: #9dd0e1;
+  background-color: #d8edf3;
   width: 450px;
   height: 400px;
   padding: 0 0.5em;
@@ -173,7 +177,64 @@
 }
 
 .todoinput {
-  background-color: #EBF6F9;
+  background-color: white;
+  border-radius: 7px;
+  border: none;
+  padding: 7px;
+  color: #ADD8E6;
+  font-weight: bold;
+  width: 250px;
+}
+
+.add-button {
+  width: 25px;
+  height: 25px;
+  background-color: #76bdd5;
+  border: none;
+}
+
+.plusimg {
+  width: 25px;
+  height: 25px;
+}
+
+.my-list-items {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 300px;
+  height: 250px;
+}
+
+li {
+  padding: 3px;
+  font-size: 18px;
+  list-style-type: none;
+}
+
+/* SHAED TO DO */
+
+.shared-to-do {
+  display: flex;
+  background-color: #d8edf3;
+  width: 450px;
+  height: 400px;
+  padding: 0 0.5em;
+  box-shadow: 0 0 10px 5px #e8e8e3;
+  border-radius: 20px;
+  margin: 0 1em;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+}
+
+.todoinput {
+  background-color: white;
   border-radius: 7px;
   border: none;
   padding: 7px;

@@ -18,7 +18,7 @@
 
     <main>
       <section id=TOP>
-      <div class="welcome"><h2>Happy Studying, Shelby!</h2></div>
+      <div class="welcome"><h2>Happy Studying!</h2></div>
       <section class="top">
         <div class="timer">
           <div class="top-buttons">  
@@ -39,7 +39,7 @@
               </svg>
           </div>
           <div class="main-buttons">
-              <div><button class="timer-button" id="restart"><img src="previous.png"></button></div>
+              <div><button class="timer-button" id="restart"><img src="back.png"></button></div>
               <div><button class="timer-button" id="play"><img src="play.png"></button></div>
               <div><button class="timer-button" id="pause"><img src="pause.png"></button></div>
             </div>
@@ -57,7 +57,7 @@
         </div>
         </div>
         <div class="mytodo">
-          <div><h2>My To Do List</h2></div>
+          <div><h3>My To Do List</h3></div>
           <div class="todo">
             <input
               type="text"
@@ -65,22 +65,16 @@
               class="todoinput"
               placeholder="Add task"
             />
-            <button class="add-button"><img class="plusimg" src="plus.png"></button>
+            <img class="plusimg" id="addtask" src="plus.png" onclick="makeToDoitem();">
           </div>
-          <div class="my-list-items">
-            <ul>
-              <li><label><input type="checkbox">Homework 1</label></li>
-              <li><label><input type="checkbox">Homework 2</label></li>
-              <li><label><input type="checkbox">Lab 1</label></li>
-            </ul>
-          </div>
+          <ul id="my-list-items"></ul>
         </div>
       </section>
       </section>
       <section class="bottom">
         <div class="shared-to-do">
-          <h2>Shared To Do List</h2>
-          <div><h5>Shelby, Alice, Jeff</h5></div>
+          <h3>Shared To Do List</h3>
+          <h5 id="members">Shelby, Alice, Jeff</h5>
           <div class="todo">
             <input
               type="text"
@@ -88,15 +82,10 @@
               class="todoinput"
               placeholder="Add task"
             />
-          <button>Add Task</button>
+            <img class="plusimg" src="plus.png" onclick="makeToDoitem();">
           </div>
-          <div>
-            <ul>
-              <li>Homework 1</li>
-              <li>Homework 2</li>
-              <li>Lab 1</li>
-            </ul>
-          </div>
+          <h5 id="message"></h5>
+          <ul class="my-list-items"></ul>
         </div>
       </section>
     </main>
@@ -106,5 +95,6 @@
       <div></div><a href="https://github.com/H3bby/startup">GitHub</a></div>
       <div>Icons by:<a href="https://www.flaticon.com/packs/user-interface-2706">Indra Maulana Yusuf</a></div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

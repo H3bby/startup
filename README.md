@@ -34,3 +34,12 @@ The HTML structure was built for my startup. Here's how each of the aspects was 
 - Login placeholder - Input box for login and shows user's name
 - Database - Items in the to-do list and showing completed pomodoros
 - Websocket - Example of shared to-do list and chat box
+
+# CSS Deliverable
+I used CSS to style what my project in the following ways:
+- Header, footer, and body content styled
+- Properly styled navigation elements
+- Correctly resizes with page
+- Properly styled application elements for timer, to-do boxes, and sign in
+- Properly styled application text for labels and about page info
+- Properly styled images on about page and buttons

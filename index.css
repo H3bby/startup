@@ -28,7 +28,7 @@
     box-shadow: 0 0 10px #e8e8e3;
   }
   
-  .TITLE {
+  .site-title {
     padding: 0 0.5em;
   }
 
@@ -60,30 +60,40 @@
 
  .top {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 2em;
   }
 
   .timer {
     background-color: #9dd0e1;
-    width: 700px;
-    height: 400px;
+    width: 80vw;
+    height: 80vw;
+    min-width: 450px;
+    max-width: 700px;
+    max-height: 400px;
     padding: 0 0.5em;
     box-shadow: 0 0 10px 5px #e8e8e3;
     border-radius: 20px;
-    margin: 0 1em;
+    margin: 0 1em auto;
   }
 
   .timer-button {
-    width: 100px;
-    height: 100px;
+    min-width: 60px;
+    min-height: 60px;
+    width: 100%;
+    height: 100%;
+    margin: 2%;
     background-color: #9dd0e1;
     border: none;
   }
 
-  img {
-    width: 100px;
-    height: 100px;
+  .timer img {
+    min-width: 60px;
+    min-height: 60px;
+    width: 100%;
+    height: 100%;
   }
 
   .top-buttons {
@@ -112,12 +122,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 3%;
   }
 
   .main-buttons {
     display: flex;
     flex-direction: row;
-    padding: 25px;
+    margin: 5%;
   }
 
   .timer-text {
@@ -300,4 +311,37 @@ footer {
 
 div {
   padding: 0 0.5em;
+}
+
+/* MEDIA QUEY */
+
+@media (max-width: 768px) {
+  .timer,
+  .mytodo,
+  .shared-to-do {
+    margin: 0.5em auto;
+  }
+  
+  .top, .bottom {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .timer {
+    height: auto;
+  }
+
+  .main-buttons {
+    flex-direction: column;
+  }
+
+  .timer-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  
+  main {
+    flex: 1 100vh;
+  }
 }

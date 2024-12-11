@@ -4,7 +4,7 @@ import "./sharedtodo.css";
 export function SharedToDoList() {
   return (
     <div className="shared-to-do">
-      <h3>Shared To Do List</h3>
+      <h3 className="todotitle">Shared To Do List</h3>
       <h5 id="members">Shelby, Alice, Jeff</h5>
       <div className="todo">
         <input

@@ -18,6 +18,10 @@
     left: 40%;
   }
 
+  ol {
+    background-color: #F3F3F1;
+  }
+
   @media (max-width: 900px) {
     #text-and-image {
       flex-direction: column;

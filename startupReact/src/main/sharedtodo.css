@@ -17,8 +17,11 @@
     align-items: center;
   }
 
-  h3 {
+  .todotitle {
     font-size: 25px;
+    font-weight: semi-bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
   
   #members {

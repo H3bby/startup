@@ -13,15 +13,11 @@ export function Main() {
           <h2>Happy Studying!</h2>
         </div>
         <section className="top">
-          {/* Timer Component */}
           <Timer />
-
-          {/* My To-Do List Component */}
           <MyToDoList />
         </section>
       </section>
 
-      {/* Shared To-Do List Component */}
       <section className="bottom">
         <SharedToDoList />
       </section>

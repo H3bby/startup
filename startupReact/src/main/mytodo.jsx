@@ -4,7 +4,7 @@ import "./mytodo.css";
 export function MyToDoList() {
   return (
     <div className="mytodo">
-      <h3>My To Do List</h3>
+      <h3 className="todotitle">My To Do List</h3>
       <div className="todo">
         <input
           type="text"

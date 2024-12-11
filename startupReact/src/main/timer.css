@@ -29,7 +29,7 @@
   }
 
   .top-buttons {
-    margin: 20px;
+    margin: 17px;
   }
   
   .top-button {
@@ -40,6 +40,8 @@
     padding: 8px;
     color: #76bdd5;
     font-weight: bold;
+    width: auto;
+    margin: 2px;
   }
 
   .circle-and-clock {

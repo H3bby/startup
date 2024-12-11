@@ -16,14 +16,14 @@ function App() {
     <BrowserRouter>
       <div>
       <header>
-      <h1 className="site-title">Pompom Study</h1>
-      <nav>
-        {authState === AuthState.Authenticated && (
-        <NavLink to="/">Home</NavLink>
-        )}
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/login">Login</NavLink>
-      </nav>
+        <h1 className="site-title">Pompom Study</h1>
+        <nav>
+          {authState === AuthState.Authenticated && (
+          <NavLink to="/">Home</NavLink>
+          )}
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/login">Login</NavLink>
+        </nav>
       </header>
 
       <Routes>

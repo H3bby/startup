@@ -1,4 +1,10 @@
-form {
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +27,7 @@ form {
     border: 3px solid #EBF6F9;
   }
 
-  button {
+  .button {
     background-color: #3691b0;
     color: #EBF6F9;
     font-weight: bold;

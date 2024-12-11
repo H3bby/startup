@@ -53,27 +53,7 @@
     height: 25px;
   }
   
-  #my-list-items {
-    position: absolute;
-    top: 40%;
-    left: 0%;
-    width: 300px;
-    height: 250px;
-  }
-  
-  ul li {
-    padding: 3px;
-    font-size: 18px;
-    list-style-type: none;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #ebf6f9;
-    border-radius: 5px;
-  }
+
 
 @media (max-width: 768px) {
     .shared-to-do {

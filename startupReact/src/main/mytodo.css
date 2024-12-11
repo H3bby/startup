@@ -50,12 +50,18 @@
     height: 25px;
   }
   
+  .list {
+    position: relative;
+    top: 3%;
+    left: -10%;
+    width: 400px;
+  }
+
   #my-list-items {
-    position: absolute;
-    top: 40%;
-    left: 0%;
-    width: 300px;
+    width: 430px;
     height: 250px;
+    overflow-y: scroll;
+    scrollbar-color: none;
   }
   
   ul li {
@@ -70,6 +76,8 @@
     justify-content: space-between;
     background: #ebf6f9;
     border-radius: 5px;
+    margin: 5px;
+    color: grey;
   }
 
   @media (max-width: 768px) {

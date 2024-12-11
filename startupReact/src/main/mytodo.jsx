@@ -5,7 +5,7 @@ export function MyToDoList() {
   const [todo, setTodo] = useState([]);
   const [inputValue, setInputValue] = useState("");  
    
-  /* get from local */
+  /* stuff with local */
   useEffect(() => {
     const savedTodo = JSON.parse(localStorage.getItem("todolist"));
     if (savedTodo) {
@@ -24,7 +24,7 @@ export function MyToDoList() {
     if (inputValue === "") {
       return;
     }
-    const newTodo = { item: inputValue, status: false };
+    const newTodo = {item: inputValue, status: false};
     setTodo((prevTodo) => [...prevTodo, newTodo]);
     setInputValue("");
   };
@@ -35,7 +35,7 @@ export function MyToDoList() {
     setTodo(updatedTodo);
   };
 
-  const handleDeleteTodo = (index) => {
+  const DeleteTodo = (index) => {
     const updatedTodo = todo.filter((_, i) => i !== index);
     setTodo(updatedTodo);
   };
@@ -49,19 +49,21 @@ export function MyToDoList() {
           id="todotext"
           className="todoinput"
           placeholder="Add task"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
         />
         <img
           className="plusimg"
           id="addtask"
           src="plus.png"
           alt="Add"
-          onClick={() => console.log("Task added!")}
+          onClick={AddTodo}
         />
       </div>
-      <ul id="my-list-items">
+      <div className="list"><ul id="my-list-items">
         {todo.map((task, index) => (
             <li key={index}>
-              <div class="Complete" onDoubleClick={() => CompleteTodo(index)}
+              <div className="Complete" onDoubleClick={() => CompleteTodo(index)}
               style={{textDecoration: task.status ? "line-through" : "none",
               }}
               >
@@ -70,11 +72,12 @@ export function MyToDoList() {
                 <img className="todo-controls" src="/images/check-mark.png" alt="Completed"/>
               )}
               </div>
-              <div><img className="delete todo-controls" onClick={() => handleDeleteTodo(index)} src="/images/delete.png" alt="Delete"/>
+              <div><img className="delete todo-controls" onClick={() => DeleteTodo(index)} src="/images/delete.png" alt="Delete"/>
               </div>
             </li> 
           ))}
       </ul>
+      </div>
     </div>
   );
 };

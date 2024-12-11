@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
 import { Login } from './login/login'
-import { Main } from './main/main'
+import { Main } from './main/home'
 import { About } from './about/about'
-import { AuthState } from './login/authState'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { AuthState } from './login/authState';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css'
 
 function App() {
@@ -14,10 +14,13 @@ function App() {
 
   return (
     <BrowserRouter>
+      <div>
       <header>
       <h1 className="site-title">Pompom Study</h1>
       <nav>
+        {authState === AuthState.Authenticated && (
         <NavLink to="/">Home</NavLink>
+        )}
         <NavLink to="/about">About</NavLink>
         <NavLink to="/login">Login</NavLink>
       </nav>
@@ -54,7 +57,7 @@ function App() {
           Icons by: <a href="https://www.flaticon.com/packs/user-interface-2706">Indra Maulana Yusuf</a>
         </div>
       </footer>
-
+      </div>
     </BrowserRouter>
   )
 }

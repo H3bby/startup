@@ -1,9 +1,9 @@
 // Main.jsx
 import React from "react";
-import Timer from "./Timer";
-import MyToDoList from "./MyToDoList";
-import SharedToDoList from "./SharedToDoList";
-import "./index.css";
+import Timer from "./timer";
+import MyToDoList from "./mytodo";
+import SharedToDoList from "./sharedtodo";
+import "./home.css";
 
 export function Main() {
   return (

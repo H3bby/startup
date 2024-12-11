@@ -3,6 +3,7 @@ import React from "react";
 import Timer from "./Timer";
 import MyToDoList from "./MyToDoList";
 import SharedToDoList from "./SharedToDoList";
+import "./index.css";
 
 export function Main() {
   return (

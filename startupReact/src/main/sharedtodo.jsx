@@ -1,4 +1,5 @@
 import React from "react";
+import "./sharedtodo.css";
 
 export function SharedToDoList() {
   return (

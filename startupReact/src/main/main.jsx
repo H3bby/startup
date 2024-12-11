@@ -4,7 +4,7 @@ import Timer from "./Timer";
 import MyToDoList from "./MyToDoList";
 import SharedToDoList from "./SharedToDoList";
 
-function Main() {
+export function Main() {
   return (
     <main>
       <section id="TOP">

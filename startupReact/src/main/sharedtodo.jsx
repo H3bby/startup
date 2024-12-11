@@ -1,6 +1,6 @@
 import React from "react";
 
-const SharedToDoList = () => {
+export function SharedToDoList() {
   return (
     <div className="shared-to-do">
       <h3>Shared To Do List</h3>

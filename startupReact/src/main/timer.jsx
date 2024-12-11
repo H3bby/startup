@@ -1,6 +1,6 @@
 import React from "react"
 
-function Timer() {
+export function Timer() {
   return (
     <div className="timer">
       <div className="top-buttons">

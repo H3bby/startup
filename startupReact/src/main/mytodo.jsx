@@ -1,6 +1,6 @@
 import React from "react"
 
-function MyToDoList() {
+export function MyToDoList() {
   return (
     <div className="mytodo">
       <h3>My To Do List</h3>

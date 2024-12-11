@@ -53,7 +53,40 @@
     height: 25px;
   }
   
+  .list {
+    position: relative;
+    top: 3%;
+    left: -10%;
+    width: 400px;
+  }
 
+  #my-list-items {
+    width: 430px;
+    height: 250px;
+    overflow-y: scroll;
+    scrollbar-color: none;
+  }
+  
+  li img {
+    width: 20px;
+    height: auto;
+  }
+
+  ul li {
+    padding: 3px;
+    font-size: 18px;
+    list-style-type: none;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ebf6f9;
+    border-radius: 5px;
+    margin: 5px;
+    color: grey;
+  }
 
 @media (max-width: 768px) {
     .shared-to-do {

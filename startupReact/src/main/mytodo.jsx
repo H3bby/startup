@@ -69,10 +69,10 @@ export function MyToDoList() {
               >
               {task.item}
               {task.status && (
-                <img className="todo-controls" src="/images/check-mark.png" alt="Completed"/>
+                <img className="todo-controls" src="/public/checkmark.png" alt="Completed"/>
               )}
               </div>
-              <div><img className="delete todo-controls" onClick={() => DeleteTodo(index)} src="/images/delete.png" alt="Delete"/>
+              <div><img className="delete todo-controls" onClick={() => DeleteTodo(index)} src="/public/delete.png" alt="Delete"/>
               </div>
             </li> 
           ))}

@@ -64,6 +64,11 @@
     scrollbar-color: none;
   }
   
+  li img {
+    width: 20px;
+    height: auto;
+  }
+
   ul li {
     padding: 3px;
     font-size: 18px;

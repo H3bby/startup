@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-import "./mytodo.css";
+import "./sharedtodo.css";
 
 export function MyToDoList() {
   const [todo, setTodo] = useState([]);

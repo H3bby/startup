@@ -16,6 +16,7 @@ body {
   background-color: #F3F3F1;
 }
 
+
 header {
   background-color: #F3F3F1;
   display: flex;
@@ -63,6 +64,7 @@ main {
   flex: 1;
   flex-direction: column;
   justify-content: start;
+  height: 100vh;
 }
 
 footer {
@@ -71,8 +73,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 100%;
 }
 
 @media (max-width: 768px) {

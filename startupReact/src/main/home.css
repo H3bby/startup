@@ -6,6 +6,13 @@
   gap: 2em;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} 
+
 .bottom {
   display: flex;
   flex-direction: row;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, useRef} from "react"
 import "./timer.css";
 
 export function Timer() {
@@ -7,6 +7,10 @@ export function Timer() {
   const [Paused, setPaused] = useState(false);
   const [timerType, setTimerType] = useState('focus');
   const [poms, setPoms] = useState([false, false, false, false]);
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  const initialTime = timerType === 'focus' ? 1500 : timerType === 'short break' ? 300 : timerType === 'long break' ? 1800 : 0;
+  const circleRef = useRef(null)
 
   /* timee */
   useEffect(() => {
@@ -18,6 +22,21 @@ export function Timer() {
 
     return () => clearInterval(intervalId);
   }, [Running, Paused, timeLeft]);
+
+  useEffect(() => {
+    if (circleRef.current) {
+      const circle = circleRef.current;
+      const radius = circle.r.baseVal.value;
+      const circumference = radius * 2 * Math.PI;
+
+      circle.style.strokeDasharray = circumference;
+      circle.style.strokeDashoffset = circumference;
+
+      const progress = (timeLeft / initialTime) * 100;
+      const offset = circumference - (progress / 100) * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+  }, [timeLeft, initialTime, circleRef]);
 
   /* functions */
   const Start = () => {
@@ -75,10 +94,6 @@ export function Timer() {
     setPoms(newPoms);
   };
 
-  const minutes = Math.floor(timeLeft / 60);
-
-  const seconds = timeLeft % 60;
-
 
   return (
     <div className="timer">
@@ -102,6 +117,7 @@ export function Timer() {
               stroke="#3691b0"
               strokeWidth="20"
               fill="transparent"
+              ref={circleRef}
             />
           </svg>
         </div>

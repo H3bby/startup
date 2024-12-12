@@ -1,7 +1,73 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import "./timer.css";
 
 export function Timer() {
+  const [timeLeft, setTimeLeft] = useState(25 * 60);
+  const [Running, setRunning] = useState(false);
+  const [Paused, setPaused] = useState(false);
+  const [timerType, setTimerType] = useState('focus');
+  const [poms, setPoms] = useState([false, false, false, false]);
+
+  /* timee */
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (isRunning && !isPaused && timeLeft > 0) {
+        setTimeLeft(timeLeft - 1);
+      }
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [isRunning, isPaused, timeLeft]);
+
+  /* functions */
+  const StartPause = () => {
+    if (isRunning && !isPaused) {
+      setIsPaused(true);
+    } else {
+      setIsRunning(true);
+      setIsPaused(false);
+    }
+  };
+
+  const Reset = () => {
+    setTimeLeft(25 * 60);
+    setIsRunning(false);
+    setIsPaused(false);
+  };
+
+  const Focus = () => {
+    setTimerType('focus');
+    setTimeLeft(25 * 60);
+    StartPause();
+  };
+
+  const ShortBreak = () => {
+    setTimerType('short break');
+    setTimeLeft(5 * 60);
+    StartPause();
+  };
+
+  const LongBreak = () => {
+    setTimerType('long break');
+    setTimeLeft(30 * 60);
+    StartPause();
+  };
+
+  const ResetPoms = () => {
+    setPoms([false, false, false, false]);
+  };
+
+  const Pom = (index) => {
+    const newPoms = [...poms];
+    newPoms[index] = true;
+    setPoms(newPoms);
+  };
+
+  const minutes = Math.floor(timeLeft / 60);
+
+  const seconds = timeLeft % 60;
+
+
   return (
     <div className="timer">
       <div className="top-buttons">

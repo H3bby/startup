@@ -44,6 +44,10 @@
     margin: 2px;
   }
 
+  .top-button.active {
+    background: white;
+  }
+
   .circle-and-clock {
     display: flex;
     position: relative;
@@ -92,12 +96,18 @@
     display: flex;
     background-color: #d8edf3;
     border-radius: 50%;
+    border: none;
     margin: 5px;
     height: 25px;
     width: 25px;
     color: #76bdd5;
     font-weight: bold;
     align-items: center;
+    justify-content: center;
+  }
+
+  .pom.active {
+    background-color: #3691b0;
   }
 
   @media (max-width: 768px) {

@@ -11,46 +11,58 @@ export function Timer() {
   /* timee */
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (isRunning && !isPaused && timeLeft > 0) {
+      if (Running && !Paused && timeLeft > 0) {
         setTimeLeft(timeLeft - 1);
       }
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [isRunning, isPaused, timeLeft]);
+  }, [Running, Paused, timeLeft]);
 
   /* functions */
-  const StartPause = () => {
-    if (isRunning && !isPaused) {
-      setIsPaused(true);
-    } else {
-      setIsRunning(true);
-      setIsPaused(false);
-    }
+  const Start = () => {
+    setRunning(true);
+    setPaused(false);
+  };
+
+  const Pause = () => {
+    setPaused(true);
   };
 
   const Reset = () => {
-    setTimeLeft(25 * 60);
-    setIsRunning(false);
-    setIsPaused(false);
+    switch (timerType) {
+      case 'focus':
+        setTimeLeft(25 * 60);
+        break;
+      case 'short break':
+        setTimeLeft(5 * 60);
+        break;
+      case 'long break':
+        setTimeLeft(30 * 60);
+        break;
+      default:
+        setTimeLeft(25 * 60);
+    }
+    setRunning(false);
+    setPaused(false);
   };
 
   const Focus = () => {
     setTimerType('focus');
     setTimeLeft(25 * 60);
-    StartPause();
+    Pause();
   };
 
   const ShortBreak = () => {
     setTimerType('short break');
     setTimeLeft(5 * 60);
-    StartPause();
+    Pause();
   };
 
   const LongBreak = () => {
     setTimerType('long break');
     setTimeLeft(30 * 60);
-    StartPause();
+    Pause();
   };
 
   const ResetPoms = () => {
@@ -59,7 +71,7 @@ export function Timer() {
 
   const Pom = (index) => {
     const newPoms = [...poms];
-    newPoms[index] = true;
+    newPoms[index] = !newPoms[index];
     setPoms(newPoms);
   };
 
@@ -71,17 +83,16 @@ export function Timer() {
   return (
     <div className="timer">
       <div className="top-buttons">
-        <button className="top-button">Focus</button>
-        <button className="top-button">Short Break</button>
-        <button className="top-button">Long Break</button>
-        <button className="top-button">Mute</button>
+        <button className={`top-button ${timerType === 'focus' ? 'active' : ''}`} onClick={Focus}>Focus</button>
+        <button className={`top-button ${timerType === 'short break' ? 'active' : ''}`} onClick={ShortBreak}>Short Break</button>
+        <button className={`top-button ${timerType === 'long break' ? 'active' : ''}`} onClick={LongBreak}>Long Break</button>
       </div>
       <div className="circle-and-buttons">
         <div className="circle-and-clock">
           <div className="timer-text">
-            <div className="mins">0</div>
+            <div className="mins">{minutes}</div>
             <div>:</div>
-            <div className="secs">00</div>
+            <div className="secs">{seconds < 10 ? `0${seconds}` : seconds}</div>
           </div>
           <svg className="progress-ring" width="250" height="250">
             <circle
@@ -95,13 +106,13 @@ export function Timer() {
           </svg>
         </div>
         <div className="main-buttons">
-          <button className="timer-button" id="restart">
+          <button className="timer-button" onClick={Reset}id="restart">
           <img src="back.png" alt="Restart" />
           </button>
-          <button className="timer-button" id="play">
+          <button className="timer-button" onClick={Start}id="play">
             <img src="play.png" alt="Play" />
           </button>
-          <button className="timer-button" id="pause">
+          <button className="timer-button" onClick={Pause}id="pause">
             <img src="pause.png" alt="Pause" />
           </button>
         </div>
@@ -109,11 +120,11 @@ export function Timer() {
       <div className="sessions">
         <h3>Sessions</h3>
         <div className="poms">
-          <div className="pom">1</div>
-          <div className="pom">2</div>
-          <div className="pom">3</div>
-          <div className="pom">4</div>
-          <button className="top-button" id="resetpoms">
+          <button className={`pom ${poms[0] ? 'active' : ''}`} onClick={() => Pom(0)}>1</button>
+          <button className={`pom ${poms[1] ? 'active' : ''}`} onClick={() => Pom(1)}>2</button>
+          <button className={`pom ${poms[2] ? 'active' : ''}`} onClick={() => Pom(2)}>3</button>
+          <button className={`pom ${poms[3] ? 'active' : ''}`} onClick={() => Pom(3)}>4</button>
+          <button className="top-button" onClick={ResetPoms}id="resetpoms">
             Reset
           </button>
         </div>
